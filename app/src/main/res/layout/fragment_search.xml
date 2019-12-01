@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f5f8"
+    tools:context="net.dm73.plainpress.fragment.Search">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_splash"
+        android:elevation="8dp"
+        android:paddingTop="25dp">
+
+        <ImageView
+            android:id="@+id/navDrawer"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_burger_icon"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:padding="2dp"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Search"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/search"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/search_toolbar"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/eventContainer"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/eventLogo"
+            android:background="@drawable/search_desactive"
+            android:drawableTop="@drawable/ic_event_logo"
+            android:drawablePadding="10dp"
+            android:text="Event"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:id="@+id/mapsContainer"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_below="@+id/mapsLogo"
+            android:background="@drawable/search_desactive"
+            android:layout_centerHorizontal="true"
+            android:drawableTop="@drawable/ic_maps_logo"
+            android:drawablePadding="10dp"
+            android:text="Location"
+            android:textColor="#424242"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/search"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_input">
+
+        <EditText
+            android:id="@+id/autoCompleteEvent"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:background="@android:color/transparent"
+            android:hint="Search by event"
+            android:inputType="textAutoCorrect"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/autoCompleteLocalisation"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:background="@android:color/transparent"
+            android:hint="Search by localisation"
+            android:inputType="textAutoComplete"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:padding="7dp"
+            android:src="@drawable/ic_search" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/searchIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#d2c1c1"
+        android:textStyle="italic"
+        android:layout_below="@+id/search"
+        android:layout_alignStart="@+id/search"
+        android:layout_alignLeft="@+id/search"
+        android:layout_marginLeft="3dp"/>
+
+</RelativeLayout>

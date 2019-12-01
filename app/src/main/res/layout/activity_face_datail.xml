@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="net.dm73.plainpress.FaceDetail"
+     android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarFacedetail"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_splash"
+        android:elevation="8dp"
+        android:paddingTop="25dp" >
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Face Details"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/back_comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:padding="3dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/avatarDone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_done"
+            android:layout_gravity="right"
+            android:layout_marginRight="18dp"
+            android:padding="3dp"
+            android:visibility="gone"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/avatarGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarFacedetail"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <!--<TextView-->
+            <!--android:id="@+id/genderTitle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Gender :"-->
+            <!--android:textColor="@color/colorText"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="20dp"/>-->
+
+        <ImageView
+            android:id="@+id/manAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_man"
+            android:background="@drawable/background_gender_active"
+            android:padding="2dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_toRightOf="@+id/genderTitle"
+            android:layout_toEndOf="@+id/genderTitle"/>
+
+        <ImageView
+            android:id="@+id/womanAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_woman"
+            android:padding="2dp"
+            android:layout_toRightOf="@+id/manAvatar"
+            android:layout_toEndOf="@+id/manAvatar" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardFaceDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="160dp"
+        android:layout_below="@+id/avatarGender" >
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/colorPalette1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="5dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/colorPalette2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/background_cercle_storck"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="15dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/colorPalette3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="15dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/colorPalette4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                app:cardCornerRadius="15dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/colorPalette5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="15dp"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/colorPalette6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/faceCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/eyesCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/noseCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/earCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/mouthCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/moustahceCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/eyebrowsCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/hairCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/beardCharater"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/charaterViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/background_character_face"
+        android:layout_above="@+id/tabTypeDetail" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabTypeDetail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:tabMode="scrollable"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabTextColor="#818181"
+        app:tabSelectedTextColor="@android:color/white"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageResult"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerInside"/>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

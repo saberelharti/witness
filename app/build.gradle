@@ -1,0 +1,82 @@
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId 'net.dm73.plainpress'
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'API_URL', ApiUrl
+        it.buildConfigField 'String', 'DECRYPTED', Decrypted
+        it.buildConfigField 'String', 'CODE_BASE', CodeBase
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile('com.twitter.sdk.android:twitter:2.3.2@aar') {
+        transitive = true;
+    }
+    compile('com.twitter.sdk.android:twitter:1.13.1@aar') {
+        transitive = true;
+    }
+    compile project(':spacelib')
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:design:27.0.2'
+    compile 'com.android.support:cardview-v7:27.0.2'
+    compile 'com.google.firebase:firebase-core:11.4.2'
+    compile 'com.google.firebase:firebase-auth:11.4.2'
+    compile 'com.firebaseui:firebase-ui-database:2.1.0'
+    compile 'com.google.firebase:firebase-database:11.4.2'
+    compile 'com.google.firebase:firebase-storage:11.4.2'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.andkulikov:transitionseverywhere:1.7.1'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'it.sephiroth.android.library.easing:android-easing:+'
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    compile 'com.android.support:support-v4:27.0.2'
+    compile 'com.etsy.android.grid:library:1.0.5'
+    compile 'com.google.android.gms:play-services:11.4.2'
+    compile 'com.google.maps.android:android-maps-utils:0.4.+'
+    compile 'com.firebase:geofire-android:2.1.1'
+    compile 'com.github.aakira:expandable-layout:1.4.2@aar'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.google.android:flexbox:0.3.0'
+    compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+    compile 'com.github.boxme:squarecamera:1.1.0'
+    compile 'com.github.rubensousa:gravitysnaphelper:1.3'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'commons-codec:commons-codec:1.9'
+    compile 'com.github.channguyen:rsv:1.0.1'
+    compile 'com.googlecode.libphonenumber:libphonenumber:8.8.2'
+    compile 'com.hbb20:ccp:2.0.3'
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+}
+

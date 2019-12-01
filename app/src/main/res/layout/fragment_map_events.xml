@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="net.dm73.plainpress.fragment.MapEvents">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/maps_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_splash"
+        android:elevation="8dp"
+        android:paddingTop="25dp">
+
+        <ImageView
+            android:id="@+id/navDrawermaps"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_burger_icon"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:padding="2dp"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Maps"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/maps_toolbar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/maps_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/background_search" >
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/autoCompleteSearch"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="45dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:hint="Search"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/clearSearch"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_close"
+            android:padding="15dp"
+            android:tint="#424242"
+            android:layout_gravity="right"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/eventDetailContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/maps_toolbar"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="350dp"
+            app:cardCornerRadius="7dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/eventImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/closeEvent"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/background_map_close_button"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/eventTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="title event"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:layout_below="@+id/eventImage"
+                    android:layout_centerHorizontal="true"/>
+
+                <RelativeLayout
+                    android:id="@+id/descriptionFragmentSeparator"
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/separator"
+                    android:layout_below="@+id/eventTitle"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/eventLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="event location"
+                    android:textColor="#627485"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/descriptionFragmentSeparator"/>
+
+                <TextView
+                    android:id="@+id/eventDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="description"
+                    android:textColor="#627485"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="6"
+                    android:layout_below="@+id/eventLocation"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/goToEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/background_map_button"
+            android:text="Go to detail"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

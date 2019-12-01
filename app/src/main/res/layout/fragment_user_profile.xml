@@ -1,0 +1,138 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.dm73.plainpress.fragment.UserProfile" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:layout_above="@+id/footer" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/background_toolbar"
+            android:elevation="8dp"
+            android:paddingTop="25dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp" >
+                <!--TODO: search for the exact marginRight in the material conception !!-->
+
+                <ImageButton
+                    android:id="@+id/profilEditButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_edit_profil" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilImage"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/profilUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profilImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/profilLocationUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/ic_map_profile"
+                    android:gravity="bottom"
+                    android:drawablePadding="5dp"
+                    android:layout_below="@+id/profilUserName"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/profilDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_profile"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/profilTopEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profilDescription"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:elegantTextHeight="true"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="My Event"
+            android:textColor="@color/colorText"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/topEventContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilTopEvent" />
+
+        <LinearLayout
+            android:id="@+id/emptyEventView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profilTopEvent"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_no_event"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No event to show !"
+                android:textColor="@color/backgroundGry"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

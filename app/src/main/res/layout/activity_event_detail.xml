@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/mediaEventContainer"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mediaEvent"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <ImageView
+                android:id="@+id/emptyContentImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/image_holder"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/backtoWall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="26dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_back" />
+
+            <RelativeLayout
+                android:id="@+id/viewPagerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/background_diagonal_event" >
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfil"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/stroke_image_profile"
+                android:padding="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fire bus"
+                android:textSize="28sp"
+                android:elegantTextHeight="true"
+                android:textColor="@android:color/white"
+                android:shadowColor="#ff424242"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:layout_above="@+id/textDivader"
+                android:layout_marginLeft="30dp" />
+
+            <RelativeLayout
+                android:id="@+id/textDivader"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:background="@color/red"
+                android:layout_above="@+id/eventLocation"
+                android:layout_marginLeft="30dp" />
+
+            <TextView
+                android:id="@+id/eventLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="losAngelos"
+                android:textSize="20sp"
+                android:elegantTextHeight="true"
+                android:textColor="@android:color/white"
+                android:shadowColor="#ff424242"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="30dp" />
+
+        </RelativeLayout>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="40dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/mediaEventContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            app:ci_drawable="@drawable/cercle_indicator" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/trendImage"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="24dp"-->
+            <!--android:layout_below="@+id/indicator"-->
+            <!--android:padding="1dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:src="@drawable/ic_trend_green" />-->
+
+        <TextView
+            android:id="@+id/viewsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/indicator"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_trend_green"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/commentCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/indicator"
+            android:layout_toEndOf="@+id/viewsNumber"
+            android:layout_toRightOf="@+id/viewsNumber"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:text="0"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_comment"/>
+
+        <TextView
+            android:id="@+id/editIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/indicator"
+            android:text="edit"
+            android:textSize="18sp"
+            android:textColor="@color/colorText"
+            android:drawableLeft="@drawable/ic_edit_event"
+            android:drawablePadding="5dp"
+            android:layout_toRightOf="@id/commentCounter"
+            android:layout_toEndOf="@id/commentCounter"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/shareEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_share"
+            android:text="share"
+            android:textSize="18sp"
+            android:textColor="@color/colorText"
+            android:drawablePadding="5dp"
+            android:layout_marginRight="18dp"
+            android:layout_below="@+id/indicator"
+            android:layout_alignRight="@+id/detailDescription"
+            android:layout_alignEnd="@+id/detailDescription"
+            android:layout_marginEnd="18dp" />
+
+        <TextView
+            android:id="@+id/eventTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01 novembre 2015"
+            android:textSize="18sp"
+            android:textColor="@color/colorText"
+            android:drawableLeft="@drawable/ic_time_event"
+            android:drawableTint="#4e5f6e"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/viewsNumber"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/detailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventTime"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/detailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailDescription"
+            android:layout_margin="10dp"
+            android:text="Detail"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:elegantTextHeight="true"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+
+        <ImageView
+            android:id="@+id/detailAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/detailTitle"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/categoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailAvatar"
+            android:layout_margin="10dp"
+            android:text="Category"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:elegantTextHeight="true"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_hashtag"
+            android:text="categorie"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_below="@+id/categoryTitle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/hashTagTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryName"
+            android:layout_margin="10dp"
+            android:text="Hashtag"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:elegantTextHeight="true"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:visibility="gone"/>
+
+        <HorizontalScrollView
+            android:id="@+id/detailHashtagContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hashTagTitle"
+            android:layout_marginBottom="10dp"
+            android:measureAllChildren="false"
+            android:scrollbarThumbHorizontal="@anim/rotate_first_reverse"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/detailHashtag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/detailLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailHashtagContainer"
+            android:layout_margin="10dp"
+            android:text="Location"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:elegantTextHeight="true"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+
+        <fragment
+            android:id="@+id/detailMap"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_below="@id/detailLocation"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/detailComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailMap"
+            android:layout_margin="10dp"
+            android:text="Comments"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            android:elegantTextHeight="true"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+
+        <RelativeLayout
+            android:id="@+id/addCommentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailComment"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <EditText
+                android:id="@+id/addCommentEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/commentSend"
+                android:layout_toStartOf="@+id/commentSend"
+                android:ems="10"
+                android:hint="Add Comment"
+                android:inputType="textMultiLine"
+                android:textColor="@color/colorText" />
+
+            <ImageView
+                android:id="@+id/commentSend"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_send" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/detailCommentaireContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="10dp"
+            android:layout_below="@+id/addCommentContainer"
+            android:layout_margin="10dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/moreComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_grid_category"
+            android:text="More Comments"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/detailCommentaireContainer"
+            android:layout_alignRight="@+id/detailCommentaireContainer" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

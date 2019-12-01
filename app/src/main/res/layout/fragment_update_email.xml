@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.dm73.plainpress.AdvancedSetting">
+
+    <RelativeLayout
+        android:id="@+id/EmailFragmentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorText"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/titleFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Email"
+            android:textSize="20sp"
+            android:textColor="@color/colorText"
+            android:shadowColor="#70424242"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_email"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/EmailFragmentHeader"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/oldPassword"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageEmail"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_input"
+        android:ems="10"
+        android:hint="old Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/newEmail"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/oldPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_input"
+        android:ems="10"
+        android:hint="New Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/updateEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/newEmail"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_splash"
+        android:text="Update Email"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:indeterminate="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

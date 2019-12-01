@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_splash"
+    tools:context="net.dm73.plainpress.Splash">
+
+    <ImageView
+        android:id="@+id/backgroundSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_plain_press_logo"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_gradient_red"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/spalshtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_centerVertical="true"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/sign_up"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:background="@drawable/background_sign"
+            android:text="Sign up"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:layout_marginRight="15dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:background="@drawable/background_sign"
+            android:text="Sign in"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/sign_up"
+            android:layout_toEndOf="@+id/sign_up"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

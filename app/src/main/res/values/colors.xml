@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ea8d7b</color>
+    <color name="colorPrimaryDark">#e05751</color>
+    <color name="colorAccent">#efb592</color>
+    <color name="colorAccentDark">#0b1039</color>
+
+
+
+    <!--app colors-->
+    <!--app colors-->
+    <color  name="orange">#efb592</color>
+    <color name="middleColor">#ea8d7b</color>
+    <color  name="red">#e05751</color>
+    <color name="green">#1bbd2e</color>
+    <color name="darkBleu">#323c46</color>
+
+
+
+    <!--text-->
+    <color name="colorText">#4d606f</color>
+    
+    <!--input-->
+    <color name="inputContour">#dbdfe2</color>b0b9c2
+    
+    <!--background preference category-->
+    <color name="backgroundGry">#b0b8c2</color>
+
+
+
+</resources>

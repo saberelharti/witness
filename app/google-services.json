@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "809219690415",
+    "firebase_url": "https://plainpress-f09a8.firebaseio.com",
+    "project_id": "plainpress-f09a8",
+    "storage_bucket": "plainpress-f09a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809219690415:android:6150c0dedbafe2ec",
+        "android_client_info": {
+          "package_name": "net.dm73.plainpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809219690415-t9dg7lgafhb9uem9um8nk2fvd542mg18.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.dm73.plainpress",
+            "certificate_hash": "8f9c0c1d901b9814a83d61d534f801b7f96690bf"
+          }
+        },
+        {
+          "client_id": "809219690415-0ara09d03q4pn9ni1f9bg9d30h6rcir2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqXOTAubxcfH3czKqn7TVEC6iMPS6Qh9U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809219690415-f61qu3ikgq1skmp6o035tv10eqb1rtdd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dm73.plainpress",
+                "app_store_id": "544007664"
+              }
+            },
+            {
+              "client_id": "809219690415-0ara09d03q4pn9ni1f9bg9d30h6rcir2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

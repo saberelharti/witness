@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_add_event"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_splash"
+        android:elevation="8dp"
+        android:paddingTop="25dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Update Event"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/back_comment"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_back" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_add_event">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/mediaContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/thirdMedia"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/stroke_media"
+                    android:padding="5dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/secondMedia"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="-70dp"
+                    android:layout_toRightOf="@+id/thirdMedia"
+                    android:background="@drawable/stroke_media"
+                    android:padding="5dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/firstMedia"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="-70dp"
+                    android:layout_toRightOf="@+id/secondMedia"
+                    android:background="@drawable/stroke_media"
+                    android:padding="5dp" />
+
+                <ImageView
+                    android:id="@+id/deletFirstMedia"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/firstMedia"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginLeft="145dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/colorText"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/deletSecondMedia"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/secondMedia"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginLeft="95dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/colorText"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/deletThirdMedia"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/thirdMedia"
+                    android:layout_marginBottom="-5dp"
+                    android:layout_marginLeft="45dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/colorText"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/addMedia"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/firstMedia"
+                    android:layout_alignRight="@+id/firstMedia"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/backgournd_add_event"
+                    android:padding="7dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_add" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titleCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mediaContainer"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Was that?"
+                android:textColor="@color/colorText"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/goLeftButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/titleCategory"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="55dp"
+                android:layout_toLeftOf="@+id/categoryChooserPager"
+                android:padding="10dp"
+                android:src="@drawable/ic_left_arrow"
+                android:tint="#3d4755" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/categoryChooserPager"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/titleCategory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_category_selected"
+                android:padding="20dp" />
+
+            <ImageView
+                android:id="@+id/goRightButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/titleCategory"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@+id/categoryChooserPager"
+                android:padding="10dp"
+                android:src="@drawable/ic_right_arrow"
+                android:tint="#3d4755" />
+
+            <EditText
+                android:id="@+id/titleEvent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/categoryChooserPager"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorText"
+                android:textColorHint="@color/backgroundGry"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/descriptionEvent"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_below="@+id/titleEvent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:hint="description"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorText"
+                 android:textColorHint="@color/backgroundGry"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:id="@+id/locationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/descriptionEvent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_input">
+
+                <EditText
+                    android:id="@+id/locationEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="45dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="Location"
+                    android:inputType="text"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/colorText"
+                     android:textColorHint="@color/backgroundGry"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/locationPicker"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_location_picker" />
+
+            </FrameLayout>
+
+
+            <EditText
+                android:id="@+id/hashTagEvent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/locationContainer"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:hint="hashTags Ex: #word#word .."
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textColor="@color/colorText"
+                 android:textColorHint="@color/backgroundGry"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:id="@+id/timePickerEvent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/hashTagEvent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_input">
+
+                <EditText
+                    android:id="@+id/calendarValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="45dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="dd/mm/yyyy"
+                    android:inputType="text"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/colorText"
+                     android:textColorHint="@color/backgroundGry"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/calendarPicker"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_calendar_picker" />
+            </FrameLayout>
+
+            <Switch
+                android:id="@+id/anonymOption"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/timePickerEvent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="anonym"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+
+            <Button
+                android:id="@+id/nextStep"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/anonymOption"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/background_splash"
+                android:text="Update"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

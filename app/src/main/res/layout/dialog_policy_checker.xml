@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dialog_confirm_email">
+
+    <ImageView
+        android:id="@+id/imageIntro"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_cercle_checked"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/textDialog"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/policy_text"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="25dp"
+        android:layout_below="@+id/imageIntro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:layout_below="@+id/textDialog">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorText"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_splash"
+            android:gravity="center"
+            android:text="I agree"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

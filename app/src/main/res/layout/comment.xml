@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/malecostume"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/userNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nick Name"
+        android:textSize="16sp"
+        android:textColor="@color/colorText"
+        android:layout_toRightOf="@id/userImage"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/userMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry, it has survived not only five centuries."
+        android:textSize="14sp"
+        android:textColor="@color/colorText"
+        android:layout_toRightOf="@id/userImage"
+        android:layout_below="@id/userNickName"/>
+
+    <TextView
+        android:id="@+id/timerComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 min"
+        android:textSize="12sp"
+        android:textColor="#6c7b8a"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="10dp"/>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#394d606f"
+        android:layout_toRightOf="@+id/userImage"
+        android:layout_below="@id/userMessage"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

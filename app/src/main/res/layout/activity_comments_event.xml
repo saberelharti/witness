@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="net.dm73.plainpress.CommentsEvent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_comments"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_splash"
+        android:elevation="8dp"
+        android:paddingTop="25dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Comments"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/back_comment"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="left"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_back" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/commentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/toolbar_comments"
+        android:clipToPadding="false"
+        android:padding="20dp"
+        tools:listitem="@layout/comment" />
+
+</RelativeLayout>

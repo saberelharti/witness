@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardEvent"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="7dp"
+    app:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/headerEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/profilImageContainer"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/background_cercle_shadow">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilImage"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/profilImageContainer">
+
+                <TextView
+                    android:id="@+id/userNikname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxWidth="150dp"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/trendImage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/userNikname"
+                    android:src="@drawable/ic_trend_green" />
+
+                <TextView
+                    android:id="@+id/viewsNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userNikname"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/trendImage"
+                    android:text="56k"
+                    android:textColor="@color/green"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/positionMap"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_maps" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/positionMap"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="56 minutes ago"
+                    android:textColor="@color/colorText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/locationEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/timer"
+                    android:text="in Los Angeles"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/mediaImageEvent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/headerEvent"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/eventViewed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Viewed"
+            android:textSize="13dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/background_viewed"
+            android:layout_below="@id/headerEvent"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/background_title_event"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="50dp"
+            android:paddingTop="15dp"
+            android:text="House Fire"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/detailEvent"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_arrow_detail" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

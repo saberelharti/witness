@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#424242"
+    android:id="@+id/playerContainer">
+
+    <ImageView
+        android:id="@+id/backEventdetail"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_back" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mediaViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicatorMedia"
+        android:layout_width="40dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/mediaViewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"
+        app:ci_drawable="@drawable/cercle_indicator_white" />
+
+
+</RelativeLayout>
+

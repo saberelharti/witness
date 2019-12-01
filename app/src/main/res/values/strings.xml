@@ -1,0 +1,317 @@
+<resources>
+    <string name="app_name">PlainPress</string>
+    <string name="title_activity_sign">SignActivity</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="logo_text">L</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+    <string name="forgot_password_link">Forgot Password?</string>
+    <string name="confirm_password_placeholder">Confirm Password</string>
+    <string name="log_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="or">OR</string>
+    <string name="fb_icon">Facebook icon</string>
+    <string name="instagram_icon">Instagram Icon</string>
+
+
+    <string name="skip"><u>Skip</u></string>
+
+    <!--splash text-->
+    <string name="splash_text">makes it possible for <b>anyone</b>,\n anywhere to <b>use technology</b> \n<b>to protect everyone</b></string>
+    <string name="policy_text">By creating an account, you agree to the PlainPress <a href="http://google.com">Terms of Services</a> and <a href="http://google.com">Privacy Policy</a></string>
+
+    <!--next text-->
+    <string name="next_0">Get Started</string>
+    <string name="next_1">Next</string>
+    <string name="next_2">Finish</string>
+
+    <!--spinner date-->
+    <string-array name="spinner_date">
+        <item>today</item>
+        <item>yesterday</item>
+        <item>this week</item>
+        <item>this month</item>
+        <item>select date</item>
+    </string-array>
+
+    <string name="searchDate">Search by date</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--facebook app_id-->
+    <string name="facebook_app_id">344340499322664</string>
+
+    <!--Twiter-->
+    <string name="twitter_consumer_key">8uYA0kYCd8pQUJLQW47WPuVg8</string>
+    <string name="twitter_consumer_secret">pG5K5nl3Pxgify0ssX2n7Lf4ELzkA8L2RdHgcxems6MGx26Q2J</string>
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+
+    <string-array name="face_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+        <item>16.png</item>
+    </string-array>
+
+    <string-array name="face_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+        <item>16.png</item>
+    </string-array>
+
+    <string-array name="hair_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+        <item>16.png</item>
+        <item>17.png</item>
+        <item>18.png</item>
+        <item>19.png</item>
+    </string-array>
+
+    <string-array name="hair_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+    </string-array>
+
+    <string-array name="eyes_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+        <item>16.png</item>
+        <item>17.png</item>
+        <item>18.png</item>
+        <item>19.png</item>
+        <item>20.png</item>
+        <item>21.png</item>
+        <item>22.png</item>
+        <item>23.png</item>
+        <item>24.png</item>
+    </string-array>
+
+    <string-array name="eyes_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+        <item>16.png</item>
+        <item>17.png</item>
+        <item>18.png</item>
+        <item>19.png</item>
+        <item>20.png</item>
+        <item>21.png</item>
+        <item>22.png</item>
+        <item>23.png</item>
+        <item>24.png</item>
+        <item>25.png</item>
+        <item>26.png</item>
+    </string-array>
+
+    <string-array name="beard_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+    </string-array>
+
+    <string-array name="mouth_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+    </string-array>
+
+    <string-array name="mouth_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+    </string-array>
+
+    <string-array name="nose_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+    </string-array>
+
+    <string-array name="nose_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+    </string-array>
+
+    <string-array name="mustache_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+    </string-array>
+
+    <string-array name="ear_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+    </string-array>
+
+    <string-array name="ear_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+    </string-array>
+
+
+    <string-array name="eyebrows_male">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+        <item>15.png</item>
+    </string-array>
+
+    <string-array name="eyebrows_female">
+        <item>01.png</item>
+        <item>02.png</item>
+        <item>03.png</item>
+        <item>04.png</item>
+        <item>05.png</item>
+        <item>06.png</item>
+        <item>07.png</item>
+        <item>08.png</item>
+        <item>09.png</item>
+        <item>10.png</item>
+        <item>11.png</item>
+        <item>12.png</item>
+        <item>13.png</item>
+        <item>14.png</item>
+    </string-array>
+
+
+</resources>
